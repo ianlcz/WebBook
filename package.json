@@ -1,15 +1,32 @@
 {
-  "name": "nextjs",
+  "name": "webbook",
   "version": "0.1.0",
   "private": true,
+  "description": "A WebApp that allows you to read a book on the Internet",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianlcz/WebBook.git"
+  },
+  "author": "Yann Le Coz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianlcz/WebBook/issues"
+  },
+  "homepage": "https://github.com/ianlcz/WebBook#readme",
   "dependencies": {
-    "next": "10.0.5",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3"
   }
 }
