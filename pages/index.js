@@ -1,9 +1,37 @@
 import Layout from "../components/Layout";
 
-const Home = () => (
+const Home = ({ books }) => (
   <Layout>
-    <h1>Bienvenue sur WebBook</h1>
+    <ul>
+      {books.map((book) => (
+        <li key={book._id}>{book.title}</li>
+      ))}
+    </ul>
   </Layout>
 );
+
+export const getServerSideProps = async (context) => {
+  const { req } = context;
+  const { host } = req.headers;
+
+  const res = await fetch(
+    `${
+      process.env.NODE_ENV !== "production"
+        ? `http://${host}`
+        : `https://${host}`
+    }/api/book`
+  );
+  const books = await res.json();
+
+  console.log(books);
+
+  if (books) {
+    return {
+      props: {
+        books,
+      },
+    };
+  }
+};
 
 export default Home;
