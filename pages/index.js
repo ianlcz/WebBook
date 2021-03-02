@@ -23,8 +23,6 @@ export const getServerSideProps = async (context) => {
   );
   const books = await res.json();
 
-  console.log(books);
-
   if (books) {
     return {
       props: {
