@@ -25,7 +25,7 @@ const Layout = ({ title = null, children }) => (
       />
     </Head>
     <Header />
-    <div className="h-screen">{children}</div>
+    <div className="container mx-auto h-screen">{children}</div>
     <Footer />
   </div>
 );

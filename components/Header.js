@@ -4,7 +4,7 @@ import { isMobileOnly } from "react-device-detect";
 
 const Header = () => {
   return (
-    <header className="flex border-b-2 px-8 py-1">
+    <header className="flex shadow-md px-8 py-1">
       <div
         className={`flex flex-wrap content-center ${
           isMobileOnly
@@ -14,7 +14,9 @@ const Header = () => {
       >
         <Link href="/">
           <a className="text-4xl text-blue-900">
-            <span className="font-thin">Web</span>Book
+            <h1>
+              <span className="font-thin">Web</span>Book
+            </h1>
           </a>
         </Link>
       </div>

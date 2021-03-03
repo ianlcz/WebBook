@@ -1,14 +1,13 @@
 import Layout from "../components/Layout";
+import Grid from "../components/Grid";
 
-const Home = ({ books }) => (
-  <Layout>
-    <ul>
-      {books.map((book) => (
-        <li key={book._id}>{book.title}</li>
-      ))}
-    </ul>
-  </Layout>
-);
+const Home = ({ books }) => {
+  return (
+    <Layout>
+      <Grid content={books} />
+    </Layout>
+  );
+};
 
 export const getServerSideProps = async (context) => {
   const { req } = context;
